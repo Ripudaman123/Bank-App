@@ -119,12 +119,12 @@ public class BankAppController extends HttpServlet {
 			int accountNumber2 = Integer.parseInt(request.getParameter("accountNumber2"));
 			amount = Double.parseDouble(request.getParameter("amount"));
 			newbal2=service.withdrawMoney(accountNumber, amount);
-			
-			if(newbal2>0) {
 			newbal1=service.depositMoney(accountNumber2, amount);
+			if(newbal2>0) {
 			request.setAttribute("bal1", newbal1);
-			//request.setAttribute("bal2", newbal2);
+			request.setAttribute("bal2", newbal2);
 			}
+			
 			dispatcher= request.getRequestDispatcher("fundtransfer.jsp");
 	    	dispatcher.forward(request, response);
 

@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Hello Sodhi bhai</h1>
+<h1>Hello</h1>
 	<jstl:if test="${requestScope.bal2==-1}">
 		<h2>Account Not Found</h2>
 	</jstl:if>
@@ -20,10 +20,12 @@
 			<h2>Account Not Found</h2>
 		</jstl:if>
 		<jstl:if test="${requestScope.bal1>0}">
-			<%-- <h2>New Balance of Sender=${requestScope.bal2}</h2> --%>
+			<h2>New Balance of Sender=${requestScope.bal2}</h2>
 			<h2>New Balance of Receiver=${requestScope.bal1}</h2>
 		</jstl:if>
 
 	</jstl:if>
+
+	
 </body>
 </html>

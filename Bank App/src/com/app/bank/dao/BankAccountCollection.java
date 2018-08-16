@@ -63,7 +63,7 @@ public class BankAccountCollection {
 	    }
 	    else if(currentAccount.get(i)!=null)
 	    {
-	    	currentAccount.get(i).setAccountBalance(savingAccount.get(i).getAccountBalance()+amount);
+	    	currentAccount.get(i).setAccountBalance(currentAccount.get(i).getAccountBalance()+amount);
 	        return currentAccount.get(i).getAccountBalance();
 	    }
 	    else
@@ -79,7 +79,7 @@ public class BankAccountCollection {
 	    }
 	    else if(currentAccount.get(i)!=null)
 	    {
-	    	currentAccount.get(i).setAccountBalance(savingAccount.get(i).getAccountBalance()-amount);
+	    	currentAccount.get(i).setAccountBalance(currentAccount.get(i).getAccountBalance()-amount);
 	        return currentAccount.get(i).getAccountBalance();
 	    }
 	    else
