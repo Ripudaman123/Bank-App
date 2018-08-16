@@ -20,6 +20,7 @@ public abstract class BankAccount {
 	}
 
 	public BankAccount( Customer accountHolder, double accountBalance) {
+		
 		this.accountHolder = accountHolder;
 		this.accountBalance = accountBalance;
 	}
@@ -30,6 +31,7 @@ public abstract class BankAccount {
 
 	public void setAccountHolder(Customer accountHolder) {
 		this.accountHolder = accountHolder;
+		
 	}
 
 	public double getAccountBalance() {
@@ -42,6 +44,12 @@ public abstract class BankAccount {
 
 	public static int getAccountId() {
 		return accountId;
+	}
+
+	@Override
+	public String toString() {
+		return "BankAccount [accountNumber=" + accountNumber + ", accountHolder=" + accountHolder + ", accountBalance="
+				+ accountBalance + "]";
 	}
 
 	public static void setAccountId(int accountId) {

@@ -1,14 +1,13 @@
 package com.app.bank.pojo;
 
-import java.time.LocalDate;
 
 public class Customer {
 
 	private final int customerId;
 	private String customerName;
-	private long contactNumber;
+	private String contactNumber;
 	private String emailId;
-	private LocalDate dateOfBirth;
+	private String dateOfBirth;
 	
     private static int custId;
 	
@@ -20,7 +19,7 @@ public class Customer {
 		this.customerId = ++custId;
 	}
 
-	public Customer(String customerName, long contactNumber, String emailId, LocalDate dateOfBirth) {
+	public Customer(String customerName, String contactNumber, String emailId, String dateOfBirth) {
 	
 		this.customerName = customerName;
 		this.contactNumber = contactNumber;
@@ -36,11 +35,11 @@ public class Customer {
 		this.customerName = customerName;
 	}
 
-	public long getContactNumber() {
+	public String getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(long contactNumber) {
+	public void setContactNumber(String contactNumber) {
 		this.contactNumber = contactNumber;
 	}
 
@@ -52,11 +51,17 @@ public class Customer {
 		this.emailId = emailId;
 	}
 
-	public LocalDate getDateOfBirth() {
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", contactNumber="
+				+ contactNumber + ", emailId=" + emailId + ", dateOfBirth=" + dateOfBirth + "]";
+	}
+
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(LocalDate dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 
